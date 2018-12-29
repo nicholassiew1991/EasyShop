@@ -2,6 +2,7 @@ package com.easyshop.service;
 
 import com.easyshop.entities.MemberEntity;
 import com.easyshop.services.MemberService;
+import com.easyshop.utils.RedisUtils;
 import com.easyshop.viewmodels.LoginVM;
 import com.easyshop.viewmodels.RegisterMemberVM;
 import org.junit.Assert;
@@ -31,7 +32,7 @@ public class MemberServiceTest {
 		vm.setUsername("nicholassiew1991");
 		vm.setPassword("nicholas");
 
-		MemberEntity result = memberService.login(vm);
+		MemberEntity result = null; //memberService.login(vm);
 
 		System.out.println(result);
 	}
